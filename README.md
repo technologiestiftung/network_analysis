@@ -8,5 +8,5 @@ Visualization.R: Creation of data visualization using visNetwork.
 
 Network_Analysis.html: HTML output of Visualization.R.
 
-A full description of the analysis is available here: https://deploy-preview-320--tsb-labsite.netlify.app/projects/tag-analysis/en/
+A full description of the analysis is available here: https://lab.technologiestiftung-berlin.de/projects/tag-analysis/en/
 
