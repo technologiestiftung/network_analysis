@@ -156,9 +156,18 @@ bi.gram.words <- raw.df %>%
   separate(word, c("word1", "word2"), sep = " ") %>% 
   unite(word,word1, word2, sep = " ") %>% 
   count(word, sort = TRUE) 
-
+               
 colnames(bi.gram.words)[1] <- "bigram"
 colnames(bi.gram.words)[2] <- "times"
+
+bi.gram.words %>% 
+  select(bigram) %>% 
+  head(10)
+
+bi.gram.words %<>% 
+  separate(col = bigram, into = c('word1', 'word2'), sep = ' ') %>% 
+  filter(! is.na(word1)) %>% 
+  filter(! is.na(word2))
 
 bi.gram.count <- bi.gram.words
 colnames(bi.gram.count)[3] <- "weight"
