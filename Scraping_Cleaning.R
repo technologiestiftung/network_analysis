@@ -141,7 +141,7 @@ finalTags$text <- tolower(finalTags$text)
 
 # Remove any duplicate tags in the same dataset
 temp <- sapply(finalTags$text, function(x) paste(unique(unlist(str_split(x,","))), collapse = ","))
-temp <- as.data.frame(test)
+temp <- as.data.frame(temp)
 finalTags$text <- temp$temp
 
 # Convert data to tibble
